@@ -4,8 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bookmark landing page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <navbar class="navbar">
+        <img class="navbar__logo" src="help-files\images\logo-bookmark.svg" alt="bookmark company logo">
+        <img class="navbar__hamburger-menu" src="help-files\images\icon-hamburger.svg" alt="hamburger menu">
+
+        <div class="navbar__hover-menu">
+            <ul class="navbar__hover-menu__items">
+                <li class="navbar__hover-menu__item">FEATURES</li>
+                <li class="navbar__hover-menu__item">PRICING</li>
+                <li class="navbar__hover-menu__item">CONTACT</li>
+                <li class="navbar__hover-menu__item">LOGIN</li>
+            </ul>
+
+            <div class="navbar__social-links">
+                <a class="navbar__social-link">
+                    <img class="navbar__social-link-img" src="help-files/images/icon-facebook.svgX" alt="facebook icon">
+                </a>
+
+                <a class="navbar__social-link">
+                    <img class="navbar__social-link-img" src="help-files/images/icon-twitter.svgX" alt="twitter icon">
+                </a>
+            </div>
+        </div>
+    </navbar>
+
+    <main class="main-content">
+        <img src="help-files\images\illustration-hero.svg" alt="">
+        <h1 class="main-content__h1">A Simple Bookmark manager</h1>
+        <p class="main-content__text">
+        A clean and simple interface to organize your favourite websites.
+        Open a new browser tab and see your sites load instantly. Try it for free.   
+        </p>
+        <button class="btn btn--blue">Get it on chrome</button>
+        <button class="btn btn--grey">Get it on firefox</button>
+    </main>
+
+    <section class="features-tabby">
+        <!---->
+        <div class="features-tabby__title">
+            <div lass="features-tabby__title-1">Simple Bookmarking</div>
+            <div lass="features-tabby__title-2">Speedy Searching</div>
+            <div lass="features-tabby__title-3">Easy Sharing</div>
+        </div>
+
+        <!---->
+        <div class="features-tabby__content">
+            <div class="features-tabby__content-1">
+                <img src="help-files\images\illustration-features-tab-1.svg" alt="">
+                <h2 class="features-tabby__header">Bookmark in one click</h2>
+                <p class="features-tabby__text">
+                Organize your bookmarks however you like.
+                Our simple drag-and-drop interface
+                gives you complete control over how you
+                manage your favourite sites
+                </p>
+            </div>
+
+            <div class="features-tabby__content-2">
+                <img src="help-files\images\illustration-features-tab-2.svg" alt="">
+                <h2 class="features-tabby__header">Intelligent search</h2>
+                <p class="features-tabby__text">
+                Our powerful search feature will help you
+                find saved sites in no time at all.
+                No need to trawl through all of your bookmarks.
+                </p>
+                <button class="btn btn--blue">More Info</button>
+            </div>
+
+            <div class="features-tabby__content-3">
+                <img src="help-files\images\illustration-features-tab-3.svg" alt="">
+                <h2 class="features-tabby__header">Share your bookmarks</h2>
+                <p class="features-tabby__text">
+                Easily share your bookmarks and collections with others.
+                Create a shareable link that
+                you can send at the click of a button.
+                </p>
+                <button class="btn btn--blue">More Info</button>
+            </div>
+
+        </div>
+        <!-- end of features-tabby__content-->
+    </section>
+
+    <section class="download-extension">
+        <div class="download-extension__words">
+            <h2 class="download-extension__header">Downlaod the extension</h2>
+            <p class="download-extension__text">
+            We’ve got more browsers in the pipeline.
+            Please do let us know if you’ve got a favourite
+            you’d like us to prioritize.
+            </p>
+        </div>
+
+        <div class="download-extension__cards">
+            <div class="download-extension__card card-1">
+                <img src="help-files\images\logo-chrome.svg" alt="">
+                <h3 class="download-extension__card__header">Add to chrome</h3>
+                <p class="download-extension__card__text">Minimum version 62</p>
+                <button class="btn btn--blue">Add & Install Extension</button>
+            </div>
+
+            <div class="download-extension__card card-2">
+                <img src="help-files\images\logo-Firefox.svg" alt="">
+                <h3 class="download-extension__card__header">Add to Firefox</h3>
+                <p class="download-extension__card__text">Minimum version 55</p>
+                <button class="btn btn--blue">Add & Install Extension</button>
+            </div>
+
+            <div class="download-extension__card card-3">
+                <img src="help-files\images\logo-Opera.svg" alt="">
+                <h3 class="download-extension__card__header">Add to Opera</h3>
+                <p class="download-extension__card__text">Minimum version 46</p>
+                <button class="btn btn--blue">Add & Install Extension</button>
+            </div>
+        </div>
+        <!--end of download-extension__cards-->
+    </section>
+    <!--end of download-extension-->
     
+
+    <section class="FAQ">
+        <div class="FAQ__words">
+            <h3 class="FAQ__header">Frequently Asked Questions</h3>
+            <p class="FAQ__text">
+            Here are some of our FAQs.
+            If you have any other questions
+            you’d like answered please feel free to email us.
+        </p>
+        </div>
+
+        <!--accordion-->
+        <div class="FAQ__accordion">
+   
+                <div classs="FAQ__accordion__tab">
+                    <div classs="FAQ__accordion__header">
+                        <h4 classs="FAQ__accordion__h4">What is Bookmark</h4>
+                        <img  classs="FAQ__accordion__img" src="help-files\images\icon-arrow.svg" alt="">
+                    </div>
+                    <div classs="FAQ__accordion__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Fusce tincidunt justo eget ultricies fringilla.
+                        Phasellus blandit ipsum quis quam ornare mattis.
+                    </div>
+                </div>
+
+                <div classs="FAQ__accordion__tab">
+                    <div classs="FAQ__accordion__header">
+                        <h4 classs="FAQ__accordion__h4">How can I request a new browser?</h4>
+                        <img  classs="FAQ__accordion__img" src="help-files\images\icon-arrow.svg" alt="">
+                    </div>
+                    <div classs="FAQ__accordion__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Fusce tincidunt justo eget ultricies fringilla.
+                        Phasellus blandit ipsum quis quam ornare mattis.
+                    </div>
+                </div>
+
+                <div classs="FAQ__accordion__tab">
+                    <div classs="FAQ__accordion__header">
+                        <h4 classs="FAQ__accordion__h4">Is there a mobile app?</h4>
+                        <img  classs="FAQ__accordion__img" src="help-files\images\icon-arrow.svg" alt="">
+                    </div>
+                    <div classs="FAQ__accordion__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Fusce tincidunt justo eget ultricies fringilla.
+                        Phasellus blandit ipsum quis quam ornare mattis.
+                    </div>
+                </div>
+
+                <div classs="FAQ__accordion__tab">
+                    <div classs="FAQ__accordion__header">
+                        <h4 classs="FAQ__accordion__h4">What about other chromium browsers?</h4>
+                        <img  classs="FAQ__accordion__img" src="help-files\images\icon-arrow.svg" alt="">
+                    </div>
+                    <div classs="FAQ__accordion__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Fusce tincidunt justo eget ultricies fringilla.
+                        Phasellus blandit ipsum quis quam ornare mattis.
+                    </div>
+                </div>
+        </div>
+        <!--end of FAQ__accordion-->
+        <button class="btn btn--blue">More Info</button>
+    </section>
+    <!--end of FAQ-->
+    
+
+    <article class="newsletter">
+        <h3 class="newsletter__h3">35,000+ already joined</h3>
+        <h2 class="newsletter__header">Stay up-to-date with what we’re doing</h2>
+        <form class="newsletter__form" action="POST">
+            <input class="newsletter__input" type="text" placeholder="Enter your email address">
+            <button class="btn btn--red">Contact Us</button>
+        </form>
+    </article>
+    <!--end of newsletter-->
+
+
+    <footer class="footer">
+        <img class="footer__logo" src="help-files\images\logo-bookmark.svg" alt="bookmark company logo">
+
+        <ul class="footer-menu__items">
+            <li class="footer-menu__item">FEATURES</li>
+            <li class="footer-menu__item">PRICING</li>
+            <li class="footer-menu__item">CONTACT</li>
+            <li class="footer-menu__item">LOGIN</li>
+        </ul>
+
+        <div class="footer__social-links">
+            <a class="footer__social-link">
+                <img class="footer_social-link-img" src="help-files/images/icon-facebook.svgX" alt="facebook icon">
+            </a>
+
+            <a class="footer__social-link">
+                <img class="footer__social-link-img" src="help-files/images/icon-twitter.svgX" alt="twitter icon">
+            </a>
+        </div>
+    </footer>
+
+
+
 </body>
 </html>
+
+<script src="script.js"></script>

@@ -1,11 +1,18 @@
 /*typography*/
-
+    /*for : body*/
+    /*weights : 400, 500*/
+    /*font-family: 'Rubik', sans-serif;*/
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 /*end of typography*/
 
 :root {
     /*color scheme*/
-    
-            
+        /*Primary*/
+            --soft-blue:hsl(231, 69%, 60%);
+            --soft-red:hsl(0, 94%, 66%);
+        /*Netural*/    
+            --grayish-blue:hsl(229, 8%, 60%);
+            --very-dark-blue:hsl(229, 31%, 21%);
     /*End of color scheme*/
 }
 
@@ -18,16 +25,16 @@
 
 html {
     box-sizing: inherit;
+    font-size:18px;
     line-height:1.4;
     scroll-behavior: smooth;
 }
 
 body {
     padding:0;
-    margin:0;   
+    margin:0;
+    font-family: 'Rubik', sans-serif;
 }
-
-
 
 img {
     display:block;
@@ -42,3 +49,7 @@ a {
     color:currentColor;
     text-decoration:none;
  }
+
+
+
+ 
