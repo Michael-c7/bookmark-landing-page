@@ -44,8 +44,14 @@
         </div>
     </nav>
 
+    
     <main class="main-content">
-        <img class="main-content__hero-img" src="help-files\images\illustration-hero.svg" alt="">
+        
+        <div class="main-content__hero-img-container">            
+            <img class="main-content__hero-img" src="help-files\images\illustration-hero.svg" alt="">
+        </div>
+        
+        
         <h1 class="main-content__h1">A Simple Bookmark manager</h1>
         <p class="main-content__text">
         A clean and simple interface to organize your favourite websites.
@@ -71,15 +77,17 @@
 
         <!---->
         <div class="features-tabby__titles">
-            <div class="features-tabby__title-1">Simple Bookmarking</div>
-            <div class="features-tabby__title-2">Speedy Searching</div>
-            <div class="features-tabby__title-3">Easy Sharing</div>
+            <h4 class="features-tabby__title features-tabby__title-1 features-tabby__title-selected">Simple Bookmarking</h4>
+            <h4 class="features-tabby__title features-tabby__title-2 ">Speedy Searching</h4>
+            <h4 class="features-tabby__title features-tabby__title-3 ">Easy Sharing</h4>
         </div>
 
         <!---->
         <div class="features-tabby__content">
             <div class="features-tabby__content-1">
-                <img src="help-files\images\illustration-features-tab-1.svg" alt="">
+                <div class="features-tabby-content-img-container">
+                    <img class="features-tabby-content-img" src="help-files\images\illustration-features-tab-1.svg" alt="">
+                </div>
                 <h2 class="features-tabby__header">Bookmark in one click</h2>
                 <p class="features-tabby__text">
                 Organize your bookmarks however you like.
@@ -88,7 +96,7 @@
                 manage your favourite sites
                 </p>
             </div>
-
+        <!-- 
             <div class="features-tabby__content-2">
                 <img src="help-files\images\illustration-features-tab-2.svg" alt="">
                 <h2 class="features-tabby__header">Intelligent search</h2>
@@ -110,6 +118,7 @@
                 </p>
                 <button class="btn btn--blue">More Info</button>
             </div>
+         -->
 
         </div>
         <!-- end of features-tabby__content-->
