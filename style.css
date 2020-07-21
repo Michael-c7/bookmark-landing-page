@@ -217,13 +217,16 @@ p {
 }
 
 .features-tabby__header {
-    font-size:1.3rem;
-    margin-bottom:-0.25rem;
+    font-size:1rem;
+    /*margin : top, right, bottom, left*/
+    margin:2rem 0 0.5rem 0;
 }
 
 .features-tabby__text {
-    font-size:0.8rem;
+    font-size:0.75rem;
     line-height: 1.6;
+    margin:0 auto;
+    width:32ch;
 }
 
 
@@ -247,6 +250,7 @@ p {
     content:'';
     position: absolute;
     width:35%;
+    /*INSTEAD OF MARGIN LEFT SHOULD USE LEFT AND TRANSFORM:TRANSLATE*/
     margin-left:33%;
     height:4px;
     top:122%; 
@@ -284,7 +288,7 @@ p {
     transform:translateY(30%);
     
     left:0;
-    background-color:hsl(0,0%,88%);
+    background-color:hsl(0, 0%, 88%);
     
 }
 
@@ -300,7 +304,7 @@ p {
     transform:translateY(-120%);
     
     left:0;
-    background-color:hsl(0,0%,88%);
+    background-color:hsl(0, 0%, 88%);
 } 
 
 
@@ -336,27 +340,207 @@ p {
     width:85%;
 }
 
+/*download-extension*/
+.download-extension {
+    text-align: center;
+    margin-bottom:7.5rem;
+}
+
+.download-extension__words {
+    margin-bottom:1.5rem;
+}
+
+.download-extension__header {
+    font-size:1rem;
+}
+
+.download-extension__text {
+    font-size:0.75rem;
+    margin:0 auto;
+    line-height:1.6;
+    width:30ch;
+}
+
+
+/*.download-extension__card*/
+.download-extension__card {
+    position: relative;
+    box-shadow: 0 5px 8px #ddd;
+    border-radius:10px;
+    margin:0 auto 3rem auto;
+    padding:1rem 0;
+    width:60%;
+} 
+
+
+/*cards background dots*/ 
+.download-extension__card::before {
+    content:'';
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+
+    background-repeat: no-repeat;
+    background-position:center 70%;
+    background-image:url("help-files/images/bg-dots.svg");
+} 
+
+
+
+.download-extension__card-img {
+    margin:0 auto;
+    width:4rem;
+    height:auto; 
+}
+
+.download-extension__card__header {
+    
+    font-size:0.85rem;
+    margin-bottom:-0.25rem;
+}
+
+.download-extension__card__text {
+    font-size:0.65rem;
+    letter-spacing: 0.5px;
+    margin-bottom:3rem;
+}
+
+
+
+
+/*FAQ*/
+.FAQ {
+    margin-bottom:7.5rem;
+    text-align: center;
+    /* background-color: gray; */
+}
+
+.FAQ__words {
+    margin-bottom:3.5rem;
+    /* background-color: gray; */
+}
+
+.FAQ__header {
+    font-weight:500;
+    font-size:1.1rem;
+}
+
+.FAQ__header span {
+     display:block;
+     /*desktop display : display:block*/
+}
+
+.FAQ__text {
+    font-size:0.8rem;
+    line-height: 1.4;
+    margin:0 auto;
+    width:32ch;
+}
+
+/*accordion*/
+
+
+.FAQ__accordion {
+    /* background-color:gold; */
+    margin-bottom:2rem;
+}
+
+.FAQ__accordion__tab {
+    /* background-color: hotpink; */
+}
+
+.FAQ__accordion__header {
+    /* background-color: rgb(185, 30, 133); */
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:0 1rem;
+    
+}
+
+
+
+.FAQ__accordion__h4 {
+    font-size:0.9rem;
+    font-weight:400;
+    color:var(--very-dark-blue);
+    
+}
+
+.FAQ__accordion__text {
+    text-align:left;
+    font-size:0.85rem;
+    color:var(--grayish-blue);
+    padding:0 1rem;
+}
+
+/* 
+.features-tabby__header {
+    font-size:1rem;
+    margin:2rem 0 0.5rem 0;
+}
+
+.features-tabby__text {
+    font-size:0.75rem;
+    line-height: 1.6;
+    margin:0 auto;
+    width:32ch;
+}
+
+
+.features-tabby__titles {
+    font-size:0.8rem;
+    margin:2.5rem 0 5rem 0;
+}
+
+.features-tabby__title {
+    position: relative;
+    font-weight:400;
+    padding:0.5rem 0;
+} */
+
+
+
+
+
+
+
+
+
  /*utilities*/
     /*button styles*/
     .btn {
+        font-family: 'Rubik', sans-serif;
+        font-size: 0.65rem;
+        letter-spacing: 0.75px;
         border:none;
         color:white;
         border-radius: 5px;
         width:7.5rem;
-        height:2.5rem;
-        
+        height:2.5rem;        
     }
 
     .btn--blue {
         color:white;
         background-color:var(--soft-blue);
-        box-shadow:0px 7px 10px d#cdc; 
+        box-shadow:0px 2px 5px #dcdc;
+    }
+
+    .btn--blue--long {
+        color:white;
+        background-color:var(--soft-blue);
+        box-shadow:0px 2px 5px #dcdc;
+        height:2.25rem;
+        width:10.25rem;
+        
+        font-weight:400;
     }
    
-    
     .btn--grey {
         color:black;
-        box-shadow:0px 5px 7px #dcdc;
+        box-shadow:0px 4px 7px #dcdc;
     }
 
     .btn--red {
