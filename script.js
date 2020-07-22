@@ -11,7 +11,6 @@
 
 /*
 ### TODO ###
-1. finish footer
 2. fix the features-tabby (mainly positioning i think)
 3. create CSS for the navbar hover menu
 ---
