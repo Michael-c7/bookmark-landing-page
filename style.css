@@ -242,6 +242,8 @@ p {
 
 .features-tabby__title {
     position: relative;
+    color:gray;
+    color:var(--grayish-blue);
     font-weight:400;
     padding:0.5rem 0;
 }
@@ -249,67 +251,46 @@ p {
 /* when the item is selected apply this class*/
 .features-tabby__title-selected {
     font-weight:500;
+    color:black;
+    color:var(--very-dark-blue);
 }
+
+
+.features-tabby__title::before,
+.features-tabby__title:last-of-type::after {
+    content:'';
+    position: absolute;
+    width:90%;
+    height:1px;
+    left:50%;
+    transform: translateX(-50%);
+    background-color:gray;
+    background-color:hsl(0, 0%, 85%);
+}
+
+/*lines in between the features-tabby__title*/
+.features-tabby__title::before {
+    top:-25%;
+}
+
+/*lines in after last item in features-tabby__title*/
+.features-tabby__title:last-of-type::after {
+    top:125%;
+    
+}
+   
 
 .features-tabby__title-selected::after {
     content:'';
     position: absolute;
-    width:35%;
-    /*INSTEAD OF MARGIN LEFT SHOULD USE LEFT AND TRANSFORM:TRANSLATE*/
-    margin-left:33%;
-    height:4px;
-    top:122%; 
-    transform:translateY(-122%);
-    
-    left:0;
+    width:30%;
+    height:5px;
+    top:115%;
+    left:50%;
+    transform:translateX(-50%);
     background-color:red;
     background-color:var(--soft-red);
 }
-
-
-/*line thats at the top / the first one*/
- .features-tabby__title:first-of-type::before {
-    content:'';
-    position: absolute;
-    width:80%;
-    margin-left:10%;
-    height:1px;
-    top:-30%; 
-    transform:translateY(30%);
-    
-    left:0;
-    background-color:hsl(0,0%,88%);
-} 
-
-
-/*line in the middle*/
-.features-tabby__title + .features-tabby__title::before {
-    content:'';
-    position: absolute;
-    width:80%;
-    margin-left:10%;
-    height:1px;
-    top:-30%; 
-    transform:translateY(30%);
-    
-    left:0;
-    background-color:hsl(0, 0%, 88%);
-}
-
-
-/*line thats at the bottom / the last one*/
-.features-tabby__title:last-of-type::after {
-    content:'';
-    position: absolute;
-    width:80%;
-    margin-left:10%;
-    height:1px;
-    top:120%; 
-    transform:translateY(-120%);
-    
-    left:0;
-    background-color:hsl(0, 0%, 88%);
-} 
 
 
 /*features-tabby__content*/
@@ -443,7 +424,31 @@ p {
 }
 
 .FAQ__accordion__tab {
+    position: relative;
     /* background-color: hotpink; */
+}
+
+
+/*lines between FAQ__accordion__tab */
+.FAQ__accordion__tab::before,
+.FAQ__accordion__tab:last-of-type::after   {
+    content:'';
+    position: absolute;
+    width:90%;
+    height:1px;
+    left:50%;
+    transform:translateX(-50%);
+    background-color:gray;
+    background-color:hsl(0, 0%, 85%);
+}
+
+.FAQ__accordion__tab:first-of-type::before {
+    content:'';
+    position: absolute;
+    width:80%;
+    height:0px;
+    left:0;
+    background-color:transparent;
 }
 
 .FAQ__accordion__header {
@@ -467,10 +472,6 @@ p {
     padding:0 0.5rem;
 }
 
-.btn--more-info {
-    width:5.5rem !important;
-    letter-spacing: 1px !important;
-}
 /* 
 .features-tabby__header {
     font-size:1rem;
@@ -550,10 +551,6 @@ p {
     padding-left:5%;
 }
 
-.btn--newsletter {
-    width:80% !important;
-}
-
 
 /*footer*/
 .footer {
@@ -579,7 +576,7 @@ p {
 
 .footer-menu__items {
     color:white;
-    color:hsl(0, 0%, 80%);
+    color:hsl(0, 0%, 85%);
     margin-top:1.0rem;
     padding:0;
     text-align: center;
@@ -645,6 +642,15 @@ p {
     .btn--red {
         color:white;
         background-color:var(--soft-red);
+    }
+    /*######*/
+    .btn--newsletter {
+        width:80%;
+    }
+
+    .btn--more-info {
+        width:5.85rem;
+        letter-spacing: 1px;
     }
     /*end of button styles*/
  /* end of utilities*/
