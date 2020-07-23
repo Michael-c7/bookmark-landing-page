@@ -236,6 +236,7 @@ p {
 }
 
 .features-tabby__titles {
+    position: relative;
     font-size:0.8rem;
     margin:2.5rem 0 5rem 0;
 }
@@ -255,9 +256,12 @@ p {
     color:var(--very-dark-blue);
 }
 
-
+/* .features-tabby__title::before is
+every line except for the last line*/
 .features-tabby__title::before,
-.features-tabby__title:last-of-type::after {
+/*.features-tabby__titles::before is
+the last line*/
+.features-tabby__titles::before {
     content:'';
     position: absolute;
     width:90%;
@@ -273,12 +277,10 @@ p {
     top:-25%;
 }
 
-/*lines in after last item in features-tabby__title*/
-.features-tabby__title:last-of-type::after {
-    top:125%;
-    
+/*the last line in (after Easy Sharing)*/
+.features-tabby__titles::before {
+    top:105%;
 }
-   
 
 .features-tabby__title-selected::after {
     content:'';

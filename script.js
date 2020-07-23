@@ -11,7 +11,6 @@
 
 /*
 ### TODO ###
-2. fix the features-tabby (mainly positioning i think)
 3. create CSS for the navbar hover menu
 ---
 4. create Javascript / functionality for navbar hover menu
