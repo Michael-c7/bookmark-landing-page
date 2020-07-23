@@ -251,9 +251,9 @@ p {
 
 /* when the item is selected apply this class*/
 .features-tabby__title-selected {
-    font-weight:500;
     color:black;
     color:var(--very-dark-blue);
+    font-weight:500;
 }
 
 /* .features-tabby__title::before is
