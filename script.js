@@ -11,19 +11,20 @@
 
 /*
 ### TODO ###
-1. create CSS for the navbar hover menu
-
-2. create active state for FAQ__accordion
-
-3. create active state for newsletter input
- (use the attribute selector for this one[])
+3. create CSS for the navbar hover menu 
 -----
-4. create Javascript / functionality for navbar hover menu
+4. create Javascript functionality for navbar hover menu
 
-5. create Javascript / functionality for features-tabby
+5. create Javascript functionality for features-tabby
 
-6. create Javascript / functionality for FAQ__accordion
+6. create Javascript functionality for FAQ__accordion
+grab -> .FAQ__accordion__h4(listen for clicks on here)
+ & .icon-arrow
+ & .icon-arrow__arrow 
+(add the .FAQ__accordion--selected class to .icon-arrow__arrow)
+
+7. create javascript for newsletter input functionality
 --
-7. create tablet / desktop versions
+8. create tablet / desktop versions
 ############
 */

@@ -462,17 +462,28 @@ the last line*/
 }
 
 .FAQ__accordion__h4 {
-    font-size:0.9rem;
+    font-size:calc(0.65rem + 0.85vw);
     font-weight:400;
     color:var(--very-dark-blue);   
+}
+/*add to the .icon-arrow__arrow
+ when you selected the .FAQ__accordion__h4*/
+.FAQ__accordion--selected  {
+    stroke:#f11;
+    transform-origin: center;
+    transform: rotate(180deg);
 }
 
 .FAQ__accordion__text {
     text-align:left;
     font-size:0.85rem;
+    line-height: 1.95;
     color:var(--grayish-blue);
-    padding:0 0.5rem;
+    padding:0 1rem;
+    margin-bottom:1.5rem;
 }
+
+
 
 /* 
 .features-tabby__header {
@@ -534,6 +545,7 @@ the last line*/
 }
 
 .newsletter__form {
+    position: relative;
     width:100%;
     display:flex;
     flex-direction: column;
@@ -541,11 +553,55 @@ the last line*/
 }
 
 .newsletter__input {
+    position: relative;
     width:80%;
     height:2.5rem;
     border:none;
     border-radius: 5px;
+    border: solid 2px  red;
+    border: solid 2px  var(--soft-red);
+    
+    z-index:300;
     margin-bottom:0.75rem;
+    
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    /*enable when email is not accepted / inncorect*/
+    background-image:url("help-files/images/icon-error.svg");
+}
+
+.newsletter__input-warning {
+    position: relative;
+    font-size:0.5rem;
+    font-style: italic;
+    text-align: left;
+    letter-spacing: 0.4px;
+    background-color:red;
+    background-color:var(--soft-red);
+    padding:0.5rem 0rem 0.25rem 0.5rem;
+    border-radius: 5px;
+    
+    /* transform:translateY(-50px) --> hidden*/
+    
+    /*transform:translateY(-20px) --> visable*/
+
+    transform:translateY(-20px);
+
+    width:80%;
+
+    z-index:200;
+}
+
+
+.newsletter__input::before {
+    content:'';
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background-color:green;
+
 }
 
 .newsletter__input::placeholder {
