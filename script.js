@@ -10,6 +10,20 @@ let navbarHoverMenu = document.body.querySelector('.navbar__hover-menu');
 let navbarHamburgerMenu = navbar.querySelector('.navbar__hamburger-menu');
 
 
+let featuresTabby = document.querySelector('.features-tabby');
+let featuresTabbyTitles = document.querySelector('.features-tabby__titles');
+let featuresTabbyTitle = Array.from(document.querySelectorAll('.features-tabby__title'));
+
+let featuresTabbyContents = document.querySelector('.features-tabby__contents');
+let featuresTabbyContent = Array.from(document.querySelectorAll('.features-tabby__content'));
+
+
+let FAQAccordion = body.querySelector('.FAQ__accordion');
+
+
+
+
+
 /*navbar hover menu*/
 function navbarHoverMenuFunctionality (event) {
     // toggles the navbar hover menu
@@ -36,14 +50,7 @@ navbarHamburgerMenu.addEventListener('click', navbarHoverMenuFunctionality);
 
 
 
- let featuresTabby = document.querySelector('.features-tabby');
- let featuresTabbyTitles = document.querySelector('.features-tabby__titles');
- let featuresTabbyTitle = Array.from(document.querySelectorAll('.features-tabby__title'));
-
-let featuresTabbyContents = document.querySelector('.features-tabby__contents');
-let featuresTabbyContent = Array.from(document.querySelectorAll('.features-tabby__content'));
-// console.log(featuresTabbyContents)
-
+/*featuresTabby*/
 function featuresTabbyFunctionality(event) {
     let myTarget = event.target;
 
@@ -88,34 +95,26 @@ featuresTabbyTitles.addEventListener('click', featuresTabbyFunctionality);
 
 
 /*FAQ__accordion*/
+function FAQAccordionFunctionality(event) {
+    let myTarget = event.target;
+    if(!myTarget.closest(".FAQ__accordion__h4")) return;
+    // the .icon-arrow__arrow of the .FAQ__accordion__icon
+    let path = myTarget.nextElementSibling.firstElementChild;
+    // the .FAQ__accordion__text
+    let text = myTarget.parentElement.nextElementSibling;
+
+    path.classList.toggle('FAQ__accordion--selected');
+    text.classList.toggle('FAQ__accordion--selected');
+}
+
+FAQAccordion.addEventListener('click', FAQAccordionFunctionality);
 
 
 
-
-
-
-
-
-
-
-
-
-
-/*FAQ__accordion steps*/
-// 1. transform & transition the height on click
-// 2. rotate the svg arrow 180deg
-// 3. change the svg arrows color to red
 
 /*
 ### TODO ###
 ------
-
-3. create Javascript functionality for FAQ__accordion
-grab -> .FAQ__accordion__h4(listen for clicks on here)
- & .icon-arrow
- & .icon-arrow__arrow 
-(add the .FAQ__accordion--selected class to .icon-arrow__arrow)
-
 4. create javascript for newsletter input functionality
 grab --> newsletter form &
 .newsletter__input (for the warning img & to read the input)

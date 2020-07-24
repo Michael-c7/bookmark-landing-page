@@ -486,27 +486,34 @@ the last line*/
 
 /*accordion*/
 .FAQ__accordion {
-    /* background-color:gold; */
-    margin-bottom:2rem;
+    margin-bottom:4rem;
 }
 
 .FAQ__accordion__tab {
-    position: relative;
-    /* background-color: hotpink; */
+    position: relative;   
 }
 
 
 /*lines between FAQ__accordion__tab */
 .FAQ__accordion__tab::before,
-.FAQ__accordion__tab:last-of-type::after   {
+.FAQ__accordion__tab:last-of-type::after {
     content:'';
     position: absolute;
     width:90%;
+    
     height:1px;
     left:50%;
     transform:translateX(-50%);
     background-color:gray;
     background-color:hsl(0, 0%, 85%);
+}
+
+.FAQ__accordion__tab::before {
+    top:-0.75rem;
+}
+.FAQ__accordion__tab:last-of-type::after {
+    top:none;
+    margin-top:-0.75rem;
 }
 
 .FAQ__accordion__tab:first-of-type::before {
@@ -519,7 +526,6 @@ the last line*/
 }
 
 .FAQ__accordion__header {
-    /* background-color: rgb(185, 30, 133); */
     display:flex;
     justify-content: space-between;
     align-items:center;
@@ -531,24 +537,48 @@ the last line*/
     font-weight:400;
     color:var(--very-dark-blue);   
 }
+
+/*path of the svg icon*/
+.icon-arrow__arrow {
+    transition:transform ease 0.65s;
+    transform-origin: center;
+    transform: rotate(0deg);
+}
+
 /*add to the .icon-arrow__arrow
  when you selected the .FAQ__accordion__h4*/
 .FAQ__accordion--selected  {
     stroke:#f11;
     transform-origin: center;
     transform: rotate(180deg);
-}
 
+    transition:transform ease 0.5s;
+}
+/*text*/
 .FAQ__accordion__text {
+    /* display:none; */
+    display:block;
     text-align:left;
     font-size:0.85rem;
     line-height: 1.95;
     color:var(--grayish-blue);
     padding:0 1rem;
     margin-bottom:1.5rem;
+    
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
 }
+/*text*/
+.FAQ__accordion__text.FAQ__accordion--selected  {
+    stroke:currentColor;
+    transform-origin: initial;
+    transform: rotate(0deg);
 
+    max-height: 100vh;
+    transition: max-height 1.5s ease;
 
+}
 
 /* 
 .features-tabby__header {
