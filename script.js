@@ -32,10 +32,50 @@ function navbarHoverMenuFunctionality (event) {
 }
 navbarHamburgerMenu.addEventListener('click', navbarHoverMenuFunctionality);
 
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+
+ let featuresTabby = document.querySelector('.features-tabby');
+ let featuresTabbyTitles = document.querySelector('.features-tabby__titles');
+ let featuresTabbyTitle = Array.from(document.querySelectorAll('.features-tabby__title'));
+
+let featuresTabbyContents = document.querySelector('.features-tabby__contents');
+let featuresTabbyContent = document.querySelectorAll('.features-tabby__content');
+
+// console.log(featuresTabbyContents)
+
+function featuresTabbyFunctionality(event) {
+    if(!featuresTabbyTitles) return;
+    let myTarget = event.target;
+    
+    // console.log(myTarget.dataset.featuresTabby);
+    // console.log(featuresTabbyTitle[1].dataset.featuresTabby);
+
+    /* ### STEPS ###
+        1. get the headers dataset attribute
+
+        2. loop through the contents for a matching dataset attribute
+
+        2.5 if the header & content attribute equal each other... 
+        2.5 - 1 : loop thorugh all the headers and remove the
+        .features-tabby__title-selected class 
+        2.5 - 1.5 : add the .features-tabby__title-selected class to the
+        header(.features-tabby__title) that you selected
+        (Sidenote : add a keyframes animation to it as well (NOT with javascript, w/ CSS))
+        
+        3. show the content(.features-tabby__content)
+        by adding a class to it
+        (all other content should be hidden)
+
+     */
+}
+
+featuresTabbyTitles.addEventListener('click', featuresTabbyFunctionality);
 
 
-// let featuresTabbyTitles = document.querySelector('.features-tabby__titles');
-// let featuresTabbyTitle = Array.from(document.querySelectorAll('.features-tabby__title'));
+
+
 
 /*features-tabby steps*/
 
