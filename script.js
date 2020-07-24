@@ -49,12 +49,10 @@ function featuresTabbyFunctionality(event) {
     if(!featuresTabbyTitles) return;
     let myTarget = event.target;
     
-    // console.log(myTarget.dataset.featuresTabby);
+    console.log(myTarget.dataset.featuresTabby);
     // console.log(featuresTabbyTitle[1].dataset.featuresTabby);
 
     /* ### STEPS ###
-        1. get the headers dataset attribute
-
         2. loop through the contents for a matching dataset attribute
 
         2.5 if the header & content attribute equal each other... 

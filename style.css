@@ -347,11 +347,27 @@ the last line*/
    /* background-color:red; */
 }
 
+.features-tabby__content {
+    display: none;
+}
+
+/*apply this class when you've selected a tabbys content*/
+.tabby__contents-selected {
+     display:flex;
+     flex-direction: column;
+}
+
+.features-tabby__content button {
+    margin-top:1.5rem;
+}
+
 .features-tabby-content-img-container {
     position: relative;
     width:100%;
     height:100%;
 }
+
+
 
 .features-tabby-content-img-container::before {
     content:'';
