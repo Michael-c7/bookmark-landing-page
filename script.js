@@ -11,7 +11,7 @@
 
 /*
 ### TODO ###
------
+------
 1. create Javascript functionality for navbar hover menu
 
 2. create Javascript functionality for features-tabby
