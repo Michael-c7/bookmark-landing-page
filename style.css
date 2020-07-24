@@ -352,9 +352,11 @@ the last line*/
 }
 
 /*apply this class when you've selected a tabbys content*/
-.tabby__contents-selected {
+.tabby__content-selected {
      display:flex;
      flex-direction: column;
+     justify-content: center;
+     align-items:center;
 }
 
 .features-tabby__content button {

@@ -32,41 +32,53 @@ function navbarHoverMenuFunctionality (event) {
 }
 navbarHamburgerMenu.addEventListener('click', navbarHoverMenuFunctionality);
 
-/////////////////////////////////////////////
-/////////////////////////////////////////////
-/////////////////////////////////////////////
+
+
+
 
  let featuresTabby = document.querySelector('.features-tabby');
  let featuresTabbyTitles = document.querySelector('.features-tabby__titles');
  let featuresTabbyTitle = Array.from(document.querySelectorAll('.features-tabby__title'));
 
 let featuresTabbyContents = document.querySelector('.features-tabby__contents');
-let featuresTabbyContent = document.querySelectorAll('.features-tabby__content');
-
+let featuresTabbyContent = Array.from(document.querySelectorAll('.features-tabby__content'));
 // console.log(featuresTabbyContents)
 
 function featuresTabbyFunctionality(event) {
-    if(!featuresTabbyTitles) return;
     let myTarget = event.target;
-    
-    console.log(myTarget.dataset.featuresTabby);
-    // console.log(featuresTabbyTitle[1].dataset.featuresTabby);
 
-    /* ### STEPS ###
-        2. loop through the contents for a matching dataset attribute
+    // if(!featuresTabbyTitles) return;
+    if(!myTarget.closest(".features-tabby__title")) return;
 
-        2.5 if the header & content attribute equal each other... 
-        2.5 - 1 : loop thorugh all the headers and remove the
-        .features-tabby__title-selected class 
-        2.5 - 1.5 : add the .features-tabby__title-selected class to the
-        header(.features-tabby__title) that you selected
-        (Sidenote : add a keyframes animation to it as well (NOT with javascript, w/ CSS))
-        
-        3. show the content(.features-tabby__content)
-        by adding a class to it
-        (all other content should be hidden)
+    let selectedHeader = myTarget.dataset.featuresTabby;
+    let selectedTab;
+    let selectedTabTitle;
+    let selectedTabContent;
+    /* loop through the contents for dataset attribute
+    that will match the selectedHeader*/
+    for(let i = 0; i < featuresTabbyContent.length; i+=1) {
+        if(selectedHeader === featuresTabbyContent[i].dataset.featuresTabby) {
+            // get the tab
+            selectedTab = featuresTabbyContent[i].dataset.featuresTabby;
 
-     */
+            // get the title
+            selectedTabTitle = featuresTabbyTitle[i];
+            // get the content
+            selectedTabContent = featuresTabbyContent[i];
+        }
+    }
+
+    /*remove selected class from all the tabby titles & tabby contents*/
+    for(let i = 0; i < featuresTabbyContent.length; i+=1 ) {
+        // tabbys titles
+        featuresTabbyTitle[i].classList.remove('features-tabby__title-selected');
+        // tabbys contents
+        featuresTabbyContent[i].classList.remove('tabby__content-selected');
+    }
+    // title
+    selectedTabTitle.classList.add('features-tabby__title-selected');
+    // content
+    selectedTabContent.classList.add('tabby__content-selected');
 }
 
 featuresTabbyTitles.addEventListener('click', featuresTabbyFunctionality);
@@ -75,22 +87,28 @@ featuresTabbyTitles.addEventListener('click', featuresTabbyFunctionality);
 
 
 
-/*features-tabby steps*/
+/*FAQ__accordion*/
+
+
+
+
+
+
+
+
 
 
 
 
 
 /*FAQ__accordion steps*/
-
-
-
+// 1. transform & transition the height on click
+// 2. rotate the svg arrow 180deg
+// 3. change the svg arrows color to red
 
 /*
 ### TODO ###
 ------
-2. create Javascript functionality for features-tabby
--
 
 3. create Javascript functionality for FAQ__accordion
 grab -> .FAQ__accordion__h4(listen for clicks on here)
