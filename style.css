@@ -944,29 +944,5 @@ the last line*/
 }
 
 
-/*hamburger active menu*/
-    /*navbar*/
-    .navbar.menu-open-navbar {
-        background-color:blue;
-        background-color: hsla(231, 69%, 20%, 85%);
-    }
-    /*navbar logo*/
-    .navbar__logo__text.menu-open-navbar {
-        fill:#fff;
-     }
-    
-     .navbar__logo__background.menu-open-navbar {
-         fill:#fff;
-     }
-     
-     .navbar__logo__foreground.menu-open-navbar {
-        fill:#000;
-    }
-
-    /*prevent body from scrolling on mobile*/
-    /*use a diffrent solution for tablet & desktop*/
-    body.menu-open-navbar {
-        position:fixed;
-    }
 
 }
