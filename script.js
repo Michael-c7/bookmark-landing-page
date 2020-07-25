@@ -51,6 +51,7 @@ function navbarHoverMenuFunctionality (event) {
         event.target.src = 'help-files/images/icon-hamburger.svg';
     }
 }
+
 navbarHamburgerMenu.addEventListener('click', navbarHoverMenuFunctionality);
 
 
@@ -141,7 +142,6 @@ newsletterForm.addEventListener('submit', (event, inputs) => {
 
 /*
 ### TODO ###
-------
-5. create tablet / desktop versions
+1. create tablet / desktop versions
 ############
 */

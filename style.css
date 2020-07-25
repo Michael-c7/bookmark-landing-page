@@ -67,7 +67,7 @@ p {
     color:var(--grayish-blue);
 }
 
-
+/*navbar*/
 .navbar {
     position: relative;
     display:flex;
@@ -144,8 +144,8 @@ p {
     border:2px solid white;
 }
 
-/*fixed bug where the before divider / lines
-  are smaller than the other divider / lines*/
+/*fixes bug where the :before divider
+  are smaller than the other divider*/
 .navbar__hover-menu__item:last-of-type:before {
     width:100%;
 }
@@ -339,6 +339,8 @@ the last line*/
     transform:translateX(-50%);
     background-color:red;
     background-color:var(--soft-red);
+
+    z-index:200;
 }
 
 
@@ -369,8 +371,6 @@ the last line*/
     height:100%;
 }
 
-
-
 .features-tabby-content-img-container::before {
     content:'';
     position: absolute;
@@ -386,8 +386,8 @@ the last line*/
 
 .features-tabby-content-img {
     position: relative;
-    margin:0 auto;
     width:85%;
+    margin:0 auto;
 }
 
 /*download-extension*/
@@ -459,12 +459,10 @@ the last line*/
 .FAQ {
     margin-bottom:7.5rem;
     text-align: center;
-    /* background-color: gray; */
 }
 
 .FAQ__words {
     margin-bottom:2rem;
-    /* background-color: gray; */
 }
 
 .FAQ__header {
@@ -579,33 +577,6 @@ the last line*/
     transition: max-height 1.5s ease;
 
 }
-
-/* 
-.features-tabby__header {
-    font-size:1rem;
-    margin:2rem 0 0.5rem 0;
-}
-
-.features-tabby__text {
-    font-size:0.75rem;
-    line-height: 1.6;
-    margin:0 auto;
-    width:32ch;
-}
-
-
-.features-tabby__titles {
-    font-size:0.8rem;
-    margin:2.5rem 0 5rem 0;
-}
-
-.features-tabby__title {
-    position: relative;
-    font-weight:400;
-    padding:0.5rem 0;
-} */
-
-
 
 
 /*newsletter*/
@@ -799,3 +770,203 @@ the last line*/
     }
     /*end of button styles*/
  /* end of utilities*/
+
+
+
+
+
+
+
+
+
+
+ /*media queries*/
+
+/*Tablet*/
+ @media(min-width:768px) {
+     /*main-content - Tablet*/
+     .main-content__hero-img {
+        position: relative;
+        width:75%;
+        margin:0 auto;
+     }
+
+     .main-content__hero-img-container::before {
+        content:'';
+        position: absolute;
+        width:100%;
+        height:85%;
+        left:25%;
+        top:15%;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        background-color:blue;
+        background-color:var(--soft-blue);
+    }
+
+
+    .features-tabby-content-img {
+        width:55%;
+    }
+
+    .features-tabby__header {
+        font-size:1.5rem;
+        /*margin : top, right, bottom, left*/
+        margin:4rem 0 0.5rem 0;
+    }
+    
+    .features-tabby__text {
+        font-size:0.85rem;
+        line-height: 1.6;
+        margin:0 auto;
+        width:32ch;
+    }
+
+    .features-tabby-content-img-container::before {
+        content:'';
+        position: absolute;
+        width:100%;
+        height:85%;
+        right:30%;
+        top:25%;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        background-color:blue;
+        background-color:var(--soft-blue);
+    }
+
+ }
+
+ /* img {
+     width:60% !important;
+ } */
+
+
+ /*Laptop*/
+ @media(min-width:1024px) {
+    /* 1. change everything to their desktop eqivalent */
+
+
+    /*navbar*/
+.navbar {
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding: 1.5rem 0 3.5rem 0;
+}
+
+.navbar__logo {
+    width:8.25rem;
+    height:1.5rem;
+    margin-left: 10%;
+ } 
+
+.navbar__hamburger-menu {
+    position: relative;
+    margin-right: 10%;
+ }
+
+/*navbar__hover-menu*/
+.navbar__hover-menu  {
+    display:none;
+    z-index:-999;
+}
+
+.menu-open {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index:999;
+}
+
+.navbar__hover-menu {
+    position: absolute;
+    top:5rem;
+    width:100%;
+    height:90vh;
+    background-color:blue;
+    background-color: hsla(231, 69%, 20%, 85%);
+}
+
+.navbar__hover-menu__items {
+    padding:0;
+    margin:0;
+}    
+
+.navbar__hover-menu__item {
+    position: relative;
+    text-align:center;
+    font-size:1.25rem;
+    color:white;
+    margin:2.5rem 0;
+}
+
+.navbar__hover-menu__item::before {
+    content:'';
+    position: absolute;
+    width:80%;
+    height:2px;
+    top:-75%;
+    left:50%;
+    transform:translateX(-50%);
+    
+    background-color: gray;
+    opacity:0.35;
+} 
+
+.navbar__hover-menu__item:last-of-type {
+    padding:0.25rem 0;
+    width:80%;
+    margin:1.5rem auto;
+    border-radius:5px;
+    border:2px solid white;
+}
+
+/*fixes bug where the :before divider
+  are smaller than the other divider*/
+.navbar__hover-menu__item:last-of-type:before {
+    width:100%;
+}
+
+.navbar__social-links {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom:3rem;
+}
+
+.navbar__social-link {
+    margin:0 1rem;
+}
+
+
+/*hamburger active menu*/
+    /*navbar*/
+    .navbar.menu-open-navbar {
+        background-color:blue;
+        background-color: hsla(231, 69%, 20%, 85%);
+    }
+    /*navbar logo*/
+    .navbar__logo__text.menu-open-navbar {
+        fill:#fff;
+     }
+    
+     .navbar__logo__background.menu-open-navbar {
+         fill:#fff;
+     }
+     
+     .navbar__logo__foreground.menu-open-navbar {
+        fill:#000;
+    }
+
+    /*prevent body from scrolling on mobile*/
+    /*use a diffrent solution for tablet & desktop*/
+    body.menu-open-navbar {
+        position:fixed;
+    }
+
+}
