@@ -21,6 +21,13 @@ let featuresTabbyContent = Array.from(document.querySelectorAll('.features-tabby
 let FAQAccordion = body.querySelector('.FAQ__accordion');
 
 
+let newsletter = body.querySelector('.newsletter');
+let newsletterForm = newsletter.querySelector('.newsletter__form');
+let newsletterInput = newsletter.querySelector('.newsletter__input');
+let newsletterInputWarning = newsletter.querySelector('.newsletter__input-warning');
+let newsletterButton = newsletter.querySelector('.btn--newsletter');
+
+let validateEmailRegEx = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/ig;
 
 
 
@@ -114,77 +121,27 @@ FAQAccordion.addEventListener('click', FAQAccordionFunctionality);
 
 
 /*Newsletter*/
-let newsletter = body.querySelector('.newsletter');
-let newsletterForm = newsletter.querySelector('.newsletter__form');
-let newsletterInput = newsletter.querySelector('.newsletter__input');
-let newsletterInputWarning = newsletter.querySelector('.newsletter__input-warning');
-let newsletterButton = newsletter.querySelector('.btn--newsletter');
-
-/* 
-    1. get the input
-
-    2. test this input against the regEx 
-
-    3. if the RegEx finds a match (evaulates to true)
-
-    3.5 add .newsletter--warning-msg-on
-    TO .newsletter__input
-    AND .newsletter__input-warning
-
-    4. if the RegEx DOES NOT finds a match (evaulates to false)
-
-    4.5 add .newsletter--warning-msg-on
-    TO .newsletter__input
-    AND .newsletter__input-warning 
- */
-console.log(newsletterInput.value);
-
- let inputValue;
-
- newsletter.addEventListener('input',(event) => {
-     console.log(newsletterInput.value);
-
-    inputValue = newsletterInput.value;
-});
-
-console.log(inputValue)
-
-let validateEmailRegEx = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/ig;
-
-newsletterForm.addEventListener('submit', (event) => {
+newsletterForm.addEventListener('submit', (event, inputs) => {
     event.preventDefault();
+    let input = newsletterInput.value;
+    console.log(input);
 
-    if(validateEmailRegEx.test() === true) {
+    if(validateEmailRegEx.test(input) === true) {
+        // hide msg
+        newsletterInput.classList.remove('newsletter--warning-msg-on');
+        newsletterInputWarning.classList.remove('newsletter--warning-msg-on');
+
+    } else if(validateEmailRegEx.test(input) === false) {
         // show msg
-        // add the error classes
-    } else if(validateEmailRegEx.test() === false) {
-        // remove the error classes
+        newsletterInput.classList.add('newsletter--warning-msg-on');
+        newsletterInputWarning.classList.add('newsletter--warning-msg-on');
     }
 });
-
-/*
-* listen for the submit event on
-  either the entire form or the newsletter button 
-
-  add . newsletter--warning-msg-on
-  TO 
-  .newsletter__input
-  AND
-  .newsletter__input-warning
-*/
-
 
 
 /*
 ### TODO ###
 ------
-4. create javascript for newsletter input functionality
-grab --> newsletter form &
-.newsletter__input (for the warning img & to read the input)
-& .newsletter__input-warning (for the message to slide down)
-apply .newsletter--warning-msg-on
-to both .newsletter__input & .newsletter__input-warning
---
 5. create tablet / desktop versions
 ############
 */
