@@ -112,6 +112,69 @@ FAQAccordion.addEventListener('click', FAQAccordionFunctionality);
 
 
 
+
+/*Newsletter*/
+let newsletter = body.querySelector('.newsletter');
+let newsletterForm = newsletter.querySelector('.newsletter__form');
+let newsletterInput = newsletter.querySelector('.newsletter__input');
+let newsletterInputWarning = newsletter.querySelector('.newsletter__input-warning');
+let newsletterButton = newsletter.querySelector('.btn--newsletter');
+
+/* 
+    1. get the input
+
+    2. test this input against the regEx 
+
+    3. if the RegEx finds a match (evaulates to true)
+
+    3.5 add .newsletter--warning-msg-on
+    TO .newsletter__input
+    AND .newsletter__input-warning
+
+    4. if the RegEx DOES NOT finds a match (evaulates to false)
+
+    4.5 add .newsletter--warning-msg-on
+    TO .newsletter__input
+    AND .newsletter__input-warning 
+ */
+console.log(newsletterInput.value);
+
+ let inputValue;
+
+ newsletter.addEventListener('input',(event) => {
+     console.log(newsletterInput.value);
+
+    inputValue = newsletterInput.value;
+});
+
+console.log(inputValue)
+
+let validateEmailRegEx = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/ig;
+
+newsletterForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if(validateEmailRegEx.test() === true) {
+        // show msg
+        // add the error classes
+    } else if(validateEmailRegEx.test() === false) {
+        // remove the error classes
+    }
+});
+
+/*
+* listen for the submit event on
+  either the entire form or the newsletter button 
+
+  add . newsletter--warning-msg-on
+  TO 
+  .newsletter__input
+  AND
+  .newsletter__input-warning
+*/
+
+
+
 /*
 ### TODO ###
 ------

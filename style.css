@@ -681,8 +681,7 @@ the last line*/
 
     z-index:200;
     transform:translateY(-52px);
-    transition:0.5s cubic-bezier(0.075, 0.82, 0.165, 1) transform;
-    
+    transition:0.5s cubic-bezier(0.075, 0.82, 0.165, 1) transform;    
 }
 /* transform:translateY(-52px) --> hidden */
 /* transform:translateY(-22px) --> visable */
