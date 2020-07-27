@@ -1109,8 +1109,11 @@ the last line*/
 
 /*download-extension*/
 .download-extension {
+    position: relative;
     text-align: center;
     margin-bottom:7.5rem;
+ 
+   
 }
 
 .download-extension__words {
@@ -1128,25 +1131,10 @@ the last line*/
     width:30ch;
 }
 .download-extension__cards {
-    display: grid;
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    
-    background-color:rgba(200, 200, 200, 0.10);
-}
-
-.card-1 {
-    /* align-self: */
-    /*align to top*/
-}
-
-.card-2 {
-    /*align to middle / center*/
-}
-
-.card-3 {
-    /*align to bottom*/
+    position: relative;
+    display:flex;
+    height:20rem;
+    /* background-color:rgba(143, 27, 27, 0.849); */
 }
 
 /*.download-extension__card*/
@@ -1158,6 +1146,32 @@ the last line*/
     padding:1rem 0;
     width:13rem;
 } 
+
+
+.card-1 {
+    /*align to left / start*/
+    position: absolute;
+    left:30%;
+    top:0%;
+    transform:translate(-30%,-0%);
+}
+
+.card-2 {
+    /*align to middle / center*/
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+
+}
+
+.card-3 {
+    /*align to bottom / end*/
+    position: absolute;
+    left:70%;
+    top:100%;
+    transform:translate(-70%,-100%);
+}
 
 
 /*FAQ*/
@@ -1335,27 +1349,27 @@ the last line*/
 
 /*footer*/
 .footer {
+    position: relative;
     color:white;
     color:var(--grayish-blue);
     background-color:black;
     background-color:var(--very-dark-blue);
-
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items:center;
-
-    padding-bottom:2.0rem;
+    padding-bottom:4.0rem;
 }
 
 .footer__logo {
     margin-top:0rem; 
+    transform:scale(0.85);
 }
 
 
 .footer__group-1 {
     display:flex;
     align-items:center;
+    position: absolute;
+    left:10%;
+    top:50%;
+    transform:translate(-10%, -50%);
 }
 
 
@@ -1375,19 +1389,22 @@ the last line*/
     color:white;
     color:hsl(0, 0%, 85%);
     padding:0 2rem;
-    
 }
 
 .footer-menu__item {
     font-size:0.7rem;
     letter-spacing: 1.85px;
-    padding:0 0.85rem ;
+    padding:0 0.85rem;
     /* padding:0; */
 }
 
 .footer__social-links {
     display:flex;
     flex-direction: row;
+    position: absolute;
+    left:90%;
+    top:50%;
+    transform:translate(-90%, -50%);
 }
 
 .footer__social-link {
@@ -1395,12 +1412,9 @@ the last line*/
     align-self:center;
     /* width:25px; */
     transform:scale(0.85);
+    transition:transform 0.10s ease;
+    transform-origin: center center;
 }
-
-
-
-
-
 
 
 /*desktop hover & active states*/
@@ -1421,16 +1435,32 @@ the last line*/
     cursor:pointer;
 }
 .features-tabby__title:active,
-.FAQ__accordion__h4:active {
+.FAQ__accordion__h4:active,
+.footer-menu__item:active {
     color:red;
     color:var(--soft-red); 
 }
+
+
+
+
+.footer__social-link:hover {
+    transition:transform 0.10s ease;
+    transform:scale(1.25);
+    cursor:pointer;
+}
+
+.footer__social-link:active {
+    transform:scale(0.85);
+}
+
+
+    /*button hover & active states*/
 
     .btn:hover {
         cursor:pointer;
     }
 
-    /*button active states*/
     .btn:active {
         background-color: transparent;
         border-style:solid;
@@ -1461,7 +1491,6 @@ the last line*/
         border:2px solid var(--soft-red);
         outline-color: red;
         outline-color: var(--soft-red);
-
 }
 
 }
