@@ -598,9 +598,14 @@ the last line*/
     align-items:center;
 }
 
+.newsletter__warning-container {
+    position:relative;
+    width:80%;
+}
+
 .newsletter__input {
     position: relative;
-    width:80%;
+    width:100%;
     height:2.5rem;
     border:none;
     border-radius: 5px;
@@ -609,18 +614,9 @@ the last line*/
     margin-bottom:0.75rem;
 }
 
-.newsletter__input.newsletter--warning-msg-on {
-    border: solid 2px  red;
-    border: solid 2px  var(--soft-red);
-
-    background-repeat: no-repeat;
-    background-position: 95% 50%;
-    background-image:url("help-files/images/icon-error.svg");
-}
-
 .newsletter__input-warning {
     position: relative;
-    width:80%;
+    width:100%;
     font-size:0.6rem;
     font-style: italic;
     text-align: left;
@@ -634,8 +630,15 @@ the last line*/
     transform:translateY(-52px);
     transition:0.5s cubic-bezier(0.075, 0.82, 0.165, 1) transform;    
 }
-/* transform:translateY(-52px) --> hidden */
-/* transform:translateY(-22px) --> visable */
+
+.newsletter__input.newsletter--warning-msg-on {
+    border: solid 2px  red;
+    border: solid 2px  var(--soft-red);
+
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+    background-image:url("help-files/images/icon-error.svg");
+}
 
 .newsletter__input-warning.newsletter--warning-msg-on {
     transform:translateY(-22px);
@@ -644,9 +647,13 @@ the last line*/
 
 .newsletter__input::placeholder {
     color:rgba(0, 0, 0, 0.35);
-    padding-left:5%;
+    padding-left:1rem;
 }
 
+.btn--newsletter {
+    position: relative;
+    bottom:0.75rem;
+}
 
 /*footer*/
 .footer {
@@ -1111,9 +1118,7 @@ the last line*/
 .download-extension {
     position: relative;
     text-align: center;
-    margin-bottom:7.5rem;
- 
-   
+    margin-bottom:7.5rem;  
 }
 
 .download-extension__words {
@@ -1151,9 +1156,9 @@ the last line*/
 .card-1 {
     /*align to left / start*/
     position: absolute;
-    left:30%;
+    left:29%;
     top:0%;
-    transform:translate(-30%,-0%);
+    transform:translate(-29%,-0%);
 }
 
 .card-2 {
@@ -1168,9 +1173,9 @@ the last line*/
 .card-3 {
     /*align to bottom / end*/
     position: absolute;
-    left:70%;
+    left:71%;
     top:100%;
-    transform:translate(-70%,-100%);
+    transform:translate(-71%,-100%);
 }
 
 
@@ -1298,47 +1303,53 @@ the last line*/
 }
 
 .btn--newsletter {
+    position:relative;
     width:6rem;
     margin-left:1rem;
 }
 
+.newsletter__warning-container {
+    position:relative;
+    width:15rem;
+    height: 5rem;
+}
+
 .newsletter__input {
-    position: relative;
+    position: absolute;
     width:15rem;
     height:2.5rem;
     border:none;
     border-radius: 5px;
-    
     z-index:300;
-    margin-bottom:0rem;
+    margin:0rem;
 
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
 }
 
-.newsletter__input.newsletter--warning-msg-on {
-    background-position: 97% 50%;
 
-}
-/*DO AFTER FOOTER*/
 .newsletter__input-warning {
     position: absolute;
-    width:15rem;
-    font-size:0.6rem;
-    font-style: italic;
-    text-align: left;
-    letter-spacing: 0.4px;
-    background-color:red;
-    background-color:var(--soft-red);  
-    border-radius: 5px;
-    padding:0.6rem 0rem 0.3rem 0.6rem;
-
-    z-index:200;
-    transform:translateY(-52px);
-    transition:0.5s cubic-bezier(0.075, 0.82, 0.165, 1) transform;    
+    top:50%;
+    transform:translateY(-50%);
+    transition:0.5s cubic-bezier(0.075, 0.82, 0.165, 1) top, transform;
 }
 
+.btn--newsletter {
+    bottom:initial;
+}
+
+/* 
+if you only transition top, transform on warning-msg-on
+it glitches meaning theres some other property we need to transition
+however
+I'm to lazy to fix this.
+*/
 .newsletter__input-warning.newsletter--warning-msg-on {
-    transform:translateY(-22px);
-    transition:0.5s cubic-bezier(0.075, 0.82, 0.165, 1) transform;
+    top:100%;
+    transform:translateY(-100%);
+    transition:0.5s cubic-bezier(0.075, 0.82, 0.165, 1) all;
 }
 
 .newsletter__input::placeholder {
@@ -1494,3 +1505,33 @@ the last line*/
 }
 
 }
+
+
+
+
+/*
+CARD FOR 1440PX
+
+.card-1 {
+    position: absolute;
+    left:29%;
+    top:0%;
+    transform:translate(-29%,-0%);
+}
+
+.card-2 {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+
+}
+
+.card-3 {
+    position: absolute;
+    left:71%;
+    top:100%;
+    transform:translate(-71%,-100%);
+}
+
+*/
