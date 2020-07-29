@@ -326,6 +326,7 @@ the last line*/
 
 /*features-tabby__content*/
 .features-tabby__contents {
+    position: relative;
    /* background-color:red; */
 }
 
@@ -343,6 +344,10 @@ the last line*/
 
 .features-tabby__content button {
     margin-top:1.5rem;
+}
+
+.btn--tabby-1 {
+    display: none;
 }
 
 .features-tabby-content-img-container {
@@ -910,7 +915,7 @@ the last line*/
     }
     /*#####################*/
 
-    /*main*/
+/*main*/
 .main-content {
     position:relative;
     width:100%;
@@ -1033,7 +1038,7 @@ the last line*/
     content:none;
 }
 
-/*the last line in (after Easy Sharing)*/
+/*the last line*/
 .features-tabby__titles::before {
     top:100%;
     width:80%;
@@ -1070,6 +1075,12 @@ the last line*/
 
 .features-tabby__content button {
     margin-top:1.5rem;
+}
+
+.btn--tabby-1 {
+    display: block;
+    width:6rem;
+    height:2.35rem;
 }
 
 .features-tabby-content-img-container {
@@ -1342,7 +1353,6 @@ I'm to lazy to fix this.
 }
 
 
-
 /*footer*/
 .footer {
     position: relative;
@@ -1521,7 +1531,7 @@ I'm to lazy to fix this.
 
     .main-content__hero-img-container {
         position: absolute;
-        width:35rem;
+        width:40rem;
         height:25rem;
         overflow: hidden;
         margin-bottom:2.5rem;
@@ -1548,23 +1558,149 @@ I'm to lazy to fix this.
 
     .main-content__hero-img {
         position: absolute;
-        width:95%;
+        width:85%;
         height:auto;
         margin:0;
-        right:5%;
+        right:15%;
         top:100%;
         transform:translateY(-100%);
     }
 
     .main-content__words {
         position:absolute;
-        left:23%;
+        left:22%;
         top:50%;
-        transform:translate(-23%, -50%);
+        transform:translate(-22%, -50%);
     }
 
+    .main-content__h1 {
+        font-size:calc(1.25rem + 0.35vw);
+    }
+
+    .main-content__text {
+        font-size:calc(0.80rem + 0.125vw);
+    }
     /*####*/
     
+
+    /*features-tabby*/
+    .features-tabby {
+        margin-bottom:7.5rem;
+        text-align: center;
+    }
+
+    .features-tabby__header {
+        font-size:1.25rem;
+        /*margin : top, right, bottom, left*/
+        margin:4rem 0 0.5rem 0;
+    }
+
+
+    .features-tabby__text {
+        font-size:calc(0.7rem + 0.1vw);
+    }
+
+    .features-tabby__titles {
+        display:flex;
+        justify-content: space-around;
+        align-items:center;
+        position: relative;
+        font-size:0.8rem;
+        margin:1.5rem auto 2.5rem auto;
+
+        width:50%;
+    }
+
+    .features-tabby__title {
+        position: relative;
+        color:gray;
+        color:var(--grayish-blue);
+        font-weight:400;
+        padding:0.15rem 0;
+    }
+
+    /*the last line*/
+    .features-tabby__titles::before {
+        top:100%;
+        width:90%;
+    }
+
+    /* when the item is selected apply this class*/
+    .features-tabby__title-selected {
+        display:flex;
+        justify-content: center;
+        color:black;
+        color:var(--very-dark-blue);
+        font-weight:500;
+    }
+
+    .features-tabby__content__inner {
+        position: relative;
+        display:flex;
+        left:20%;
+        transform:translateX(-20%);
+        background-color:pink;
+    }
+
+    .features-tabby__content {
+        position: relative;
+    }
+    /*apply this class when you've selected a tabbys content*/
+    .tabby__content-selected {
+        position: relative;
+        background-color:red;      
+    }
+
+
+
+    .features-tabby__title-selected::after {
+        content:'';
+        position: absolute;
+        width:150%;
+        height:5px;
+        top:160%;
+        left:50%;
+        transform:translateX(-50%);
+        background-color:red;
+        background-color:var(--soft-red);
+
+        z-index:200;
+    }
+   
+    .features-tabby-content-img-container {
+        position: relative;
+        width:20rem;
+        height:100%;
+        left:0;
+    }
+    
+    .features-tabby-content-img-container::before {
+        content:'';
+        position: absolute;
+        width:50rem;
+        height:85%;
+        right:0%;
+        top:30%;
+        border-top-right-radius:300px;
+        border-bottom-right-radius:300px;
+        background-color:blue;
+        background-color:var(--soft-blue);
+    }
+
+    .features-tabby-content-img {
+        position: relative;
+        width:100%;
+        margin:0;
+        left:0%;
+    }
+
+    .features-tabby__contents__words {
+        margin:0 5rem;
+    }
+
+
+
+
 
     /*cards*/
     .card-1 {
@@ -1588,6 +1724,29 @@ I'm to lazy to fix this.
         top:100%;
         transform:translate(-71%,-100%);
     }
+
+
+    /*footer*/
+
+    .footer__group-1 {
+        display:flex;
+        align-items:center;
+        position: absolute;
+        left:10%;
+        top:50%;
+        transform:translate(-10%, -50%);
+    }
+
+    .footer__social-links {
+        display:flex;
+        flex-direction: row;
+        position: absolute;
+        left:90%;
+        top:50%;
+        transform:translate(-90%, -50%);
+    }
+
+
 }
 
 
@@ -1620,7 +1779,85 @@ I'm to lazy to fix this.
 
     
 /*4K*/
-@media(min-width:1920px) {
+@media(min-width:2560px) {
+    /*navbar*/
+    .navbar__logo {
+        position: relative;
+        left:28%;
+        transform:translateX(-28%);
+    } 
+
+    /*login*/
+    .navbar__hover-menu__item:last-of-type {
+        position: relative;
+        padding:10px 30px;
+        
+        margin:0 0 0 25rem;
+        right:48%;
+        transform:translateX(48%);
+    }
+
+    /*main*/
+    .main-content {
+        position:relative;
+        width:100%;
+        height:50vh;
+        margin-bottom:7.5rem;
+        text-align: left;
+    }
+
+    .main-content__hero-img-container {
+        position: absolute;
+        width:60rem;
+        height:30rem;
+        overflow: hidden;
+        margin-bottom:2.5rem;
+
+        left:100%;
+        top:45%;
+        transform:translate(-100%,-50%);
+
+        /* background-color:red; */
+    }
+
+    .main-content__hero-img-container::before {
+        content:'';
+        position: absolute;
+        width:100%;
+        height:75%;
+        left:30%;
+        top:25%;
+        border-top-left-radius: 300px;
+        border-bottom-left-radius: 300px;
+        background-color:blue;
+        background-color:var(--soft-blue);
+    }
+
+    .main-content__hero-img {
+        position: absolute;
+        width:60%;
+        height:auto;
+        margin:0;
+        right:25%;
+        top:100%;
+        transform:translateY(-100%);
+    }
+
+    .main-content__words {
+        position:absolute;
+        left:33%;
+        top:50%;
+        transform:translate(-33%, -50%);
+    }
+
+    .main-content__h1 {
+        font-size:calc(1.25rem + 0.35vw);
+    }
+
+    .main-content__text {
+        font-size:calc(0.80rem + 0.125vw);
+    }
+    /*####*/
 
     /*cards*/
     .card-1 {
@@ -1646,4 +1883,51 @@ I'm to lazy to fix this.
     }
   }
 
+}
+
+
+
+/*### Custom Scroll Bar ###*/
+/*width*/
+::-webkit-scrollbar {
+    width:15px;
+}
+/*track*/
+::-webkit-scrollbar-track {
+    background:white;
+    background-image: linear-gradient(0deg,#ddd,#fff);
+    box-shadow: inset -2px -2px 8px #333;
+}
+/*handle*/
+::-webkit-scrollbar-thumb {
+    background:#444;
+
+    background-image: linear-gradient(-90deg,hsl(229, 31%, 25%),hsl(229, 31%, 45%));
+    box-shadow: inset -2px -2px 8px hsl(229, 31%, 25%);
+
+    box-shadow: 2px 2px 7px #666;
+    border-radius:10px;
+  }
+  /*handle on hover*/
+  ::-webkit-scrollbar-thumb:hover {
+    background:#222;
+    background-image: linear-gradient(-90deg,hsl(229, 31%, 28%),hsl(229, 31%, 48%));
+  }
+/*#########################*/
+
+
+
+
+
+/*### custom selection colors ###*/
+::-moz-selection {
+    color:white;
+    background-color:red;
+    background-color:var(--soft-red);
+}
+
+::selection {
+    color:white;
+    background-color:red;
+    background-color:var(--soft-red);
 }
