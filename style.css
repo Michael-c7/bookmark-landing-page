@@ -1747,7 +1747,6 @@ the last line*/
 
 
     /*footer*/
-
     .footer__group-1 {
         display:flex;
         align-items:center;
@@ -1773,24 +1772,169 @@ the last line*/
 /*Desktop*/
 @media(min-width:1920px) {
 
+    /*navbar*/
+    .navbar__logo {
+        position: relative;
+        left:20%;
+        transform:translateX(-20%);
+    } 
+
+    /*login*/
+    .navbar__hover-menu__item:last-of-type {
+        position: relative;
+        padding:10px 30px;
+        
+        margin:0 0 0 17rem;
+        right:40%;
+        transform:translateX(40%);
+    }
+
+    /*main*/
+    .main-content {
+        position:relative;
+        width:100%;
+        height:50vh;
+        margin-bottom:7.5rem;
+        text-align: left;
+    }
+
+    .main-content__hero-img-container {
+        position: absolute;
+        width:60rem;
+        height:35rem;
+        overflow: hidden;
+        margin-bottom:2.5rem;
+
+        left:100%;
+        top:40%;
+        transform:translate(-100%,-50%);
+    }
+
+    .main-content__hero-img-container::before {
+        content:'';
+        width:100%;
+        height:65%;
+        left:40%;
+        top:35%;
+
+        background-color:blue;
+        background-color:var(--soft-blue);
+    }
+
+    .main-content__hero-img {
+        position: absolute;
+        width:57%;
+        height:auto;
+        margin:0;
+        right:20%;
+        top:80%;
+        transform:translateY(-80%);
+    }
+
+    .main-content__words {
+        position:absolute;
+        left:25%;
+        top:50%;
+        transform:translate(-25%, -50%);
+    }
+
+    .main-content__h1 {
+        font-size:calc(1.25rem + 0.35vw);
+    }
+
+    .main-content__text {
+        font-size:calc(0.80rem + 0.125vw);
+    }
+    /*####*/
+
+
+
+    /*features-tabby*/
+
+    .features-tabby__content__inner {
+        position: relative;
+        display:flex;
+        align-items:center;
+        /*width -> used to bring the items closer together*/
+
+        width:45%;
+        /*Use for 4k -> width:35%; */
+        height:100%;
+        /* background-color:pink; */
+    }
+
+    .features-tabby__content {
+        position: relative;
+        width:100%;
+        height:13.75rem;
+        /* background-color:peru; */
+    }
+
+    /*apply this class when you've selected a tabbys content*/
+    .tabby__content-selected {
+        position: relative;
+    }
+
+    .features-tabby-content-img-container {
+        display:flex;
+        align-items:center;
+        position: absolute;
+        width:21rem;
+        height:100%;
+        left:15%;
+        transform:translate(-15%);
+        
+        margin-top:2rem;
+
+        /* background-color:purple; */
+    }
+    
+    .features-tabby-content-img-container::before {
+        content:'';
+        position: absolute;
+        /*width -> length*/
+        width:80rem;
+        height:100%;
+        /*left -> how far to the left your putting it,
+        effectively acts as how right would normally*/
+        left:-300%;
+        top:70%;
+        transform:translateY(-50%);
+        border-top-right-radius:300px;
+        border-bottom-right-radius:300px;
+        background-color:blue;
+        background-color:var(--soft-blue);
+    }
+
+    .features-tabby-content-img {
+        position: relative;
+        width:100%;
+        margin:0;
+        left:0%;
+    }
+
+    .features-tabby__contents__words {
+        position: absolute;
+        left:100%;
+        transform:translateX(-100%);
+    }
+
+    /*###*/
+
     /*cards*/
     .card-1 {
-        position: absolute;
         left:34%;
         top:0%;
         transform:translate(-34%,-0%);
     }
     
     .card-2 {
-        position: absolute;
         left:50%;
         top:50%;
         transform:translate(-50%,-50%);
-    
     }
     
     .card-3 {
-        position: absolute;
         left:66%;
         top:100%;
         transform:translate(-66%,-100%);
@@ -1836,8 +1980,6 @@ the last line*/
         left:100%;
         top:45%;
         transform:translate(-100%,-50%);
-
-        /* background-color:red; */
     }
 
     .main-content__hero-img-container::before {

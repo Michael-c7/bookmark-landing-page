@@ -31,6 +31,8 @@ let validateEmailRegEx = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?
 
 
 
+
+
 /*navbar hover menu*/
 function navbarHoverMenuFunctionality (event) {
     // toggles the navbar hover menu
@@ -137,3 +139,20 @@ newsletterForm.addEventListener('submit', (event, inputs) => {
         newsletterInputWarning.classList.add('newsletter--warning-msg-on');
     }
 });
+
+
+
+
+
+
+
+
+
+/*
+Improvements to make 
+1. make the background shapes the same size
+2. give the "add install extensions" buttons 
+hover and active states
+3. fix the how the navbar has been position specifically the login button
+4. numerous other things...
+*/
