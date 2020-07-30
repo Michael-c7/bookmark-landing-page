@@ -1627,25 +1627,6 @@ the last line*/
         font-weight:500;
     }
 
-    .features-tabby__content__inner {
-        position: relative;
-        display:flex;
-        left:20%;
-        transform:translateX(-20%);
-        /* background-color:pink; */
-    }
-
-    .features-tabby__content {
-        position: relative;
-    }
-    /*apply this class when you've selected a tabbys content*/
-    .tabby__content-selected {
-        position: relative;
-        /* background-color:red;       */
-    }
-
-
-
     .features-tabby__title-selected::after {
         content:'';
         position: absolute;
@@ -1659,21 +1640,50 @@ the last line*/
 
         z-index:200;
     }
-   
-    .features-tabby-content-img-container {
+
+    .features-tabby__content__inner {
         position: relative;
-        width:20rem;
+        display:flex;
+        align-items:center;
+        width:60%;
         height:100%;
-        left:0;
+        /* background-color:pink;*/
+    }
+
+    .features-tabby__content {
+        position: relative;
+        width:100%;
+        height:13.75rem;
+        /* background-color:peru; */
+    }
+
+    /*apply this class when you've selected a tabbys content*/
+    .tabby__content-selected {
+        position: relative;
+    }
+
+    .features-tabby-content-img-container {
+        display:flex;
+        align-items:center;
+        position: absolute;
+        width:21rem;
+        height:100%;
+        left:10%;
+        transform:translate(-10%);
+        
+        margin-top:2rem;
+
+        /* background-color:purple; */
     }
     
     .features-tabby-content-img-container::before {
         content:'';
         position: absolute;
         width:50rem;
-        height:85%;
-        right:0%;
-        top:30%;
+        height:100%;
+        left:-150%;
+        top:70%;
+        transform:translateY(-50%);
         border-top-right-radius:300px;
         border-bottom-right-radius:300px;
         background-color:blue;
@@ -1682,18 +1692,35 @@ the last line*/
 
     .features-tabby-content-img {
         position: relative;
+        
         width:100%;
         margin:0;
         left:0%;
     }
 
     .features-tabby__contents__words {
-        margin:0 5rem;
+        position: absolute;
+        left:100%;
+        transform:translateX(-100%);
+
+        /* background-color: springgreen; */
     }
 
+    .features-tabby__contents__words__inner {
+        position: relative;
+        width:100%;
+        transform:translateY(-18%);
 
+        /* background-color: thistle; */
+    }
 
+    .features-tabby__header {
+        font-size:1.35rem;
+    }
 
+    .features-tabby__text {
+        width:38ch;
+    }
 
     /*cards*/
     .card-1 {
