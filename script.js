@@ -137,10 +137,3 @@ newsletterForm.addEventListener('submit', (event, inputs) => {
         newsletterInputWarning.classList.add('newsletter--warning-msg-on');
     }
 });
-
-
-/*
-### TODO ###
-1. create tablet / desktop versions
----
-*/
