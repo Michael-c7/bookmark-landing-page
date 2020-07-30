@@ -1324,7 +1324,6 @@ the last line*/
     transform:translateY(-50%);
 }
 
-
 .newsletter__input-warning {
     position: absolute;
     top:50%;
@@ -1336,12 +1335,6 @@ the last line*/
     bottom:initial;
 }
 
-/* 
-if you only transition top & transform on warning-msg-on
-it glitches meaning theres some other property we need to transition
-however
-I'm to lazy to fix this.
-*/
 .newsletter__input-warning.newsletter--warning-msg-on {
     top:100%;
     transform:translateY(-100%);
@@ -1639,7 +1632,7 @@ I'm to lazy to fix this.
         display:flex;
         left:20%;
         transform:translateX(-20%);
-        background-color:pink;
+        /* background-color:pink; */
     }
 
     .features-tabby__content {
@@ -1648,7 +1641,7 @@ I'm to lazy to fix this.
     /*apply this class when you've selected a tabbys content*/
     .tabby__content-selected {
         position: relative;
-        background-color:red;      
+        /* background-color:red;       */
     }
 
 
