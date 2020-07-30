@@ -125,7 +125,6 @@ FAQAccordion.addEventListener('click', FAQAccordionFunctionality);
 newsletterForm.addEventListener('submit', (event, inputs) => {
     event.preventDefault();
     let input = newsletterInput.value;
-    console.log(input);
 
     if(validateEmailRegEx.test(input) === true) {
         // hide msg
@@ -143,5 +142,5 @@ newsletterForm.addEventListener('submit', (event, inputs) => {
 /*
 ### TODO ###
 1. create tablet / desktop versions
-############
+---
 */
